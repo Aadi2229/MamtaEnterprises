@@ -199,7 +199,7 @@ function App() {
       );
       return () => unsub();
     }
-  }, [showWarehouse, db]);
+  }, [showWarehouse]); // <-- FIXED: db removed from dependency array
 
   // Remove brand options when removeItem changes
   const removeBrandsForItem = React.useMemo(() => {
